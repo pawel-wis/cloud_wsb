@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{%  block content %}
+<h1>Welcome, click button to add your note</h1>
+<a class="btn btn-primary" href="add" role="button">Add a note</a>
+
+{% for note in notes %}
+<h3>{{ note.title }}</h3>
+<p>{{ note.text }}</p>
+
+{% endfor %}
+{% endblock %}
